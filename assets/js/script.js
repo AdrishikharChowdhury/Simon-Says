@@ -123,3 +123,8 @@ boxes.forEach((box,idx)=>{
     })
 });
 
+if (window.location.hostname === "adrishikharchowdhury.github.io") {
+    const baseTag = document.createElement("base");
+    baseTag.href = "/Simon-Says/";
+    document.head.appendChild(baseTag);
+  }
