@@ -10,7 +10,7 @@ A classic "Simon Says" style memory game built with vanilla HTML, CSS, and JavaS
 
 ## ✨ Demo
 
-**[➡️ View Live Demo](https://your-live-demo-link.com)**
+**[➡️ View Live Demo](https://adrishikharchowdhury.github.io/Simon-Says/)**
 
 ---
 
