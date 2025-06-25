@@ -1,0 +1,132 @@
+/* ========================================= */
+/*           Responsive Design               */
+/* ========================================= */
+
+/* --- Tablet Styles (up to 1024px) --- */
+@media screen and (max-width: 1024px) {
+    .heading {
+        font-size: 3rem;
+        text-align: center;
+    }
+
+    .main-section {
+        /* Allow the main layout to be more flexible */
+        width: 95%;
+        height: 100%;
+        flex-direction: column; /* Stack the main sections vertically */
+        gap: 2rem;
+    }
+
+    .game {
+        /* The game area takes full width on tablets */
+        width: 100%;
+        order: 2; /* Make the game appear after the scoreboard */
+    }
+
+    .game-board {
+        /* The scoreboard also takes full width */
+        width: 80%;
+        height: 100%;
+        order: 1; /* Make the scoreboard appear first */
+        height: auto;
+        flex-direction: row; /* Arrange scoreboard items horizontally */
+        flex-wrap: wrap; /* Allow items to wrap if needed */
+        justify-content: space-around;
+        padding: 1.5rem;
+    }
+
+    .game-section {
+        /* Give the game grid a bit more room */
+        width: 80%;
+        height: 80%;
+        padding: 2rem;
+    }
+
+    .difficulty {
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        gap: 3rem;
+    }
+
+    .diff-button {
+        width: 60%;
+        font-size: 1.5rem;
+    }
+
+    .message {
+        font-size: 1.8rem;
+    }
+}
+
+
+/* --- Mobile Styles (up to 600px) --- */
+@media screen and (max-width: 600px) {
+    body {
+        /* Allow natural scrolling on mobile */
+        height: auto;
+        min-height: 100vh;
+        padding: 1rem 0; /* Add some vertical padding */
+    }
+
+    .heading {
+        font-size: 2.5rem;
+    }
+
+    .main-section {
+        width: 98%;
+        height: 100%;
+        flex-direction: column-reverse;
+    }
+
+    .game-section {
+        /* Make the game grid more compact */
+        padding: 1rem;
+        gap: 1rem;
+        border-radius: 2rem;
+    }
+
+    .box {
+        /* Use viewport width (vw) for fluidly sized boxes */
+        width: 25vw;
+        height: 25vw;
+        max-width: 6.5rem;  /* Set a max size */
+        max-height: 6.5rem; /* Set a max size */
+        border-radius: 2rem;
+    }
+
+    .game-board {
+        gap: 1.5rem;
+        padding: 1rem;
+        font-size: 1.2rem;
+    }
+
+    .start-end {
+        /* Stack the start/reset buttons vertically */
+        flex-direction: column;
+        gap: 1rem;
+        height: auto;
+        background: none; /* Remove background for a cleaner look */
+        width: 80%;
+        box-shadow: none;
+    }
+
+    .box-1 {
+        width: 80%;
+        font-size: 1.2rem;
+    }
+
+    .difficulty {
+        gap: 3rem;
+    }
+    
+    .diff-button {
+        width: 50%;
+        font-size: 1.2rem;
+        padding: 0.8rem;
+    }
+
+    .message {
+        font-size: 1.5rem;
+    }
+}

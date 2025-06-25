@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Memory Game</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/mobilestyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="./assets/js/script.js" defer></script>
+    <link rel="shortcut icon" href="./assets/img/generated-image.png" type="image/x-icon">
+</head>
+<body>
+    <p class="heading">Memory Game</p>
+    <div class="main-section">
+        <div class="game-board">
+            Choose the Difficulty:
+            <div class="difficulty">
+                <button class="diff-button" class="EASY" data-level="5">Easy</button>
+                <p class="winCount">0</p>
+            </div>
+            <div class="difficulty">
+                <button class="diff-button" class="MEDIUM" data-level="10">Medium</button>
+                <p class="winCount">0</p>
+            </div>
+            <div class="difficulty">
+                <button class="diff-button" class="HARD" data-level="15">Hard</button>
+                <p class="winCount">0</p>
+            </div>
+            <div class="message"></div>
+        </div>
+        <div class="game">
+            <div class="game-section">
+                <button class="box" id="1"><i class="fa-solid fa-chess-bishop"></i></button>
+                <button class="box" id="2"><i class="fa-solid fa-chess-knight"></i></button>
+                <button class="box" id="3"><i class="fa-solid fa-chess-rook"></i></button>
+                <button class="box" id="4"><i class="fa-solid fa-chess-king"></i></button>
+                <button class="box" id="5"><i class="fa-solid fa-chess"></i></button>
+                <button class="box" id="6"><i class="fa-solid fa-chess-queen"></i></button>
+                <button class="box" id="7"><i class="fa-regular fa-chess-bishop"></i></button>
+                <button class="box" id="8"><i class="fa-regular fa-chess-knight"></i></button>
+                <button class="box" id="9"><i class="fa-regular fa-chess-rook"></i></button>
+            </div>
+            <div class="start-end">
+                <button class="start box-1">Start Game</button>
+                <button class="reset box-1">Reset Score</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
