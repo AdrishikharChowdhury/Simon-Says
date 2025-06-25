@@ -80,22 +80,20 @@
     }
 
     .game-section {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 1rem;
+        /* Make the game grid more compact */
         padding: 1rem;
+        gap: 1rem;
         border-radius: 2rem;
-        width: 95%; /* Make it take up the full width of its container */
-        height: auto; /* Let the grid determine its own height */
+        height: 50%;
     }
 
     .box {
-        aspect-ratio: 1 / 1; /* This makes the box a perfect square */
-        background-color: var(--box-color);
-        cursor: pointer;
+        /* Use viewport width (vw) for fluidly sized boxes */
+        width: 25vw;
+        height: 25vw;
+        max-width: 6.5rem;  /* Set a max size */
+        max-height: 6.5rem; /* Set a max size */
         border-radius: 2rem;
-        box-shadow: 0.4rem 0.8rem 1.2rem 0.5rem rgba(0, 0, 0, 0.25);
-        border: none;
     }
 
     .game-board {
@@ -134,20 +132,26 @@
     }
 }
 
-.glow{
-    background-color: var(--glow-color);
-    filter: drop-shadow(0 0 1rem var(--glow-color));
-    color: black;
-}
+/* --- Mobile Styles (up to 600px) --- */
+@media screen and (max-width: 600px) {
+    /* ... (your other body, heading, etc. styles are fine) ... */
 
-.right{
-    background-color: rgb(72, 255, 0);
-    filter: drop-shadow(0 0 1rem var(--glow-color));
-    color: black;
-}
+    .game-section {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+        padding: 1rem;
+        border-radius: 2rem;
+        width: 90%; /* Make it take up the full width of its container */
+        height: auto; /* Let the grid determine its own height */
+    }
 
-.wrong{
-    background-color: rgb(255, 0, 0);
-    filter: drop-shadow(0 0 1rem var(--glow-color));
-    color: black;
+    .box {
+        aspect-ratio: 1 / 1; /* This makes the box a perfect square */
+        background-color: var(--box-color);
+        cursor: pointer;
+        border-radius: 2rem;
+        box-shadow: 0.4rem 0.8rem 1.2rem 0.5rem rgba(0, 0, 0, 0.25);
+        border: none;
+    }
 }
