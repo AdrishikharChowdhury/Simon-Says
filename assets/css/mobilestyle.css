@@ -131,27 +131,3 @@
         font-size: 1.5rem;
     }
 }
-
-/* --- Mobile Styles (up to 600px) --- */
-@media screen and (max-width: 600px) {
-    /* ... (your other body, heading, etc. styles are fine) ... */
-
-    .game-section {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 1rem;
-        padding: 1rem;
-        border-radius: 2rem;
-        width: 90%; /* Make it take up the full width of its container */
-        height: auto; /* Let the grid determine its own height */
-    }
-
-    .box {
-        aspect-ratio: 1 / 1; /* This makes the box a perfect square */
-        background-color: var(--box-color);
-        cursor: pointer;
-        border-radius: 2rem;
-        box-shadow: 0.4rem 0.8rem 1.2rem 0.5rem rgba(0, 0, 0, 0.25);
-        border: none;
-    }
-}
