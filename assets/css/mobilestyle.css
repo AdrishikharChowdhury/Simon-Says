@@ -159,3 +159,22 @@
 
     /* ... (your other mobile styles for game-board, start-end, etc. are fine) ... */
 }
+
+
+.glow{
+    background-color: var(--glow-color);
+    filter: drop-shadow(0 0 1rem var(--glow-color));
+    color: black;
+}
+
+.right{
+    background-color: rgb(72, 255, 0);
+    filter: drop-shadow(0 0 1rem var(--glow-color));
+    color: black;
+}
+
+.wrong{
+    background-color: rgb(255, 0, 0);
+    filter: drop-shadow(0 0 1rem var(--glow-color));
+    color: black;
+}
