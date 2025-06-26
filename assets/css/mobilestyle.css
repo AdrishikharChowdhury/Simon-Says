@@ -140,10 +140,12 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 1rem;
-        padding: 1rem;
+        padding: 2rem;
         border-radius: 2rem;
-        width: 95%; /* Make it take up the full width of its container */
-        height: auto; /* Let the grid determine its own height */
+        width: 90%; /* Make it take up the full width of its container */
+        height: auto;
+        justify-content: center;
+        align-items: center; /* Let the grid determine its own height */
     }
 
     .box {
