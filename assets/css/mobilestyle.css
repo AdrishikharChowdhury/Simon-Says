@@ -1,4 +1,3 @@
-/* Extra Small Devices (≤ 400px) */
 @media (max-width: 500px) {
     body{
         gap: 2rem;
