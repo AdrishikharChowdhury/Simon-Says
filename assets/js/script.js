@@ -123,8 +123,14 @@ boxes.forEach((box,idx)=>{
 });
 
 if (window.location.hostname === "simonbollo.netlify.app") {
-  const baseTag = document.createElement("base");
-  // Setting base to root so './assets/...' resolves from root
-  baseTag.href = "/";
-  document.head.appendChild(baseTag);
+  window.addEventListener('DOMContentLoaded', () => {
+    const links = document.querySelectorAll('link[rel="stylesheet"]');
+    links.forEach(link => {
+      if (link.href.includes('./assets/css/')) {
+        // Replace './assets/css/' with '/assets/css/' in href
+        const newHref = link.getAttribute('href').replace('./assets/css/', '/assets/css/');
+        link.setAttribute('href', newHref);
+      }
+    });
+  });
 }
