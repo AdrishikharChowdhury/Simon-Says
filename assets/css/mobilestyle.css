@@ -1,422 +1,45 @@
-/*
-  This media query will now be based on PRECISE measurements from your browser.
-  We will start it just ABOVE the breaking point to be safe.
-*/
-@media screen and (max-width: 1280px) {
-
-    .game-section {
-        /* Reduce the gap to save space */
-        gap: 1rem; /* This is now 16px instead of 32px */
-    }
-
-    /* --- THE FINAL FIX --- */
-    .box {
-        /*
-          REPLACE THIS VALUE based on your calculation.
-          For example, if you need the box to be 120px, use 7.5rem.
-          If you need it to be 112px, use 7rem.
-        */
-        width: 4.5rem;
-        height: 4.5rem;
-        
-        /* Adjust other properties for the new size */
-        font-size: 3.5rem;
-        border-radius: 2.5rem;
-    }
-}
-
-
-@media screen and (max-width: 1300px) {
-
-    /* Main goal: Reduce the fixed 'rem' sizes so they fit inside their shrinking '%' containers */
-
-    .main-section {
-        gap: 2rem; /* Reduce the main gap to pull things closer */
-    }
-
-    .game-section {
-        gap: 1.5rem; /* Reduce the gap between the game boxes */
-    }
-
-    /* --- THE CRITICAL FIX --- */
-    .box {
-        /* Shrink the boxes significantly so they don't wrap */
-        width: 7rem;
-        height: 7rem;
-        
-        /* Scale down the font inside the box accordingly */
-        font-size: 3rem;
-        border-radius: 2.5rem;
-    }
-
-
-    /* --- Scale down other elements for visual consistency --- */
-    .heading {
-        font-size: 3.5rem;
-    }
-
-    .game-board {
-        padding: 1.5rem;
-        font-size: 1.5rem;
-    }
-
-    .diff-button {
-        padding: 0.8rem;
-        font-size: 1.5rem;
-    }
-
-    .box-1 {
-        font-size: 1.4rem;
-    }
-}
-
-@media screen and (max-width: 1440px) {
-    .heading {
-        font-size: 3.5rem;
-    }
-
-    /* --- Give the main layout slightly more room --- */
-    .main-section {
-        width: 95%;
+/* Extra Small Devices (≤ 400px) */
+@media (max-width: 500px) {
+    body{
         gap: 2rem;
     }
 
-    .game {
-        /* Allow the game container to be a bit more flexible */
-        width: 35%;
-    }
-    
-    .game-board {
-        /* Adjust the scoreboard width as well */
-        width: 25%;
-        padding: 1.5rem;
-        font-size: 1.6rem;
-    }
-
-    .game-section {
-        /* Reduce the gap between boxes */
-        gap: 1.5rem;
-    }
-
-    /* --- This is the most important change --- */
-    .box {
-        /* Shrink the boxes to fit the smaller container */
-        width: 7.5rem;
-        height: 7.5rem;
-        font-size: 3.5rem;
-        border-radius: 2.5rem;
-    }
-
-    /* --- Adjust the difficulty section --- */
-    .difficulty {
-        gap: 2rem;
-        font-size: 1.6rem;
-    }
-
-    .diff-button {
-        padding: 0.8rem;
-        font-size: 1.5rem;
-    }
-    
-    .message {
-        font-size: 1.8rem;
-    }
-    
-    /* --- Scale down the start/reset buttons --- */
-    .start-end {
-        justify-content: space-around;
-    }
-
-    .box-1 {
-        font-size: 1.5rem;
-        width: 45%;
-    }
-}
-
-
-/* --- Targets screens up to 1280px wide --- */
-@media screen and (max-width: 1550px) {
-    /* --- Scale down the main heading --- */
-    .heading {
-        font-size: 3rem;
-    }
-
-    /* --- Give the main section a bit more room and reduce the gap --- */
-    .main-section {
-        width: 95%;
-        gap: 2rem;
-    }
-
-    /* --- Make the game grid container slightly more compact --- */
-    .game-section {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 1rem;
-        padding: 1.2rem;
-    }
-
-    /* --- Shrink the game boxes, which is the most important change --- */
-    .box {
-        width: 7rem;
-        height: 7rem;
-        font-size: 3rem; /* Scale down the 'X' or 'O' inside */
-        border-radius: 2.5rem;
-    }
-
-    /* --- Reduce the size of the scoreboard and its text --- */
-    .game-board {
-        padding: 1.5rem;
+    .heading{
         font-size: 1.5rem;
     }
 
-    .difficulty {
-        gap: 2rem; /* Less space between difficulty buttons */
-        font-size: 1.5rem;
-    }
-
-    .diff-button {
-        padding: 0.8rem;
-        font-size: 1.5rem;
-    }
-    
-    .message {
-        font-size: 1.6rem;
-    }
-
-    /* --- Scale down the start/reset buttons --- */
-    .box-1 {
-        font-size: 1.4rem;
-    }
-}
-
-
-/* --- Tablet Styles (up to 1024px) --- */
-@media screen and (max-width: 1024px) {
-    .heading {
-        font-size: 3rem;
-        text-align: center;
-    }
-
-    .main-section {
-        /* Allow the main layout to be more flexible */
-        width: 95%;
-        height: 100%;
-        flex-direction: column; /* Stack the main sections vertically */
-        gap: 2rem;
-    }
-
-    .game {
-        /* The game area takes full width on tablets */
-        width: 100%;
-        order: 2; /* Make the game appear after the scoreboard */
-    }
-
-    .game-board {
-        /* The scoreboard also takes full width */
+    .game-board{
         width: 80%;
-        height: 100%;
-        order: 1; /* Make the scoreboard appear first */
-        height: auto;
-        flex-direction: row; /* Arrange scoreboard items horizontally */
-        flex-wrap: wrap; /* Allow items to wrap if needed */
-        justify-content: space-around;
-        padding: 1.5rem;
-    }
-
-    .game-section {
-        /* Give the game grid a bit more room */
-        width: 80%;
-        height: 80%;
-        padding: 2rem;
-    }
-
-    .difficulty {
-        width: 100%;
-        height: auto;
-        flex-direction: row;
-        gap: 3rem;
-    }
-
-    .diff-button {
-        width: 60%;
-        font-size: 1.5rem;
-    }
-
-    .message {
-        font-size: 1.8rem;
-    }
-}
-
-
-/* --- Mobile Styles (up to 600px) --- */
-@media screen and (max-width: 600px) {
-    body {
-        /* Allow natural scrolling on mobile */
-        height: auto;
-        min-height: 100vh;
-        padding: 1rem 0; /* Add some vertical padding */
-    }
-
-    .heading {
-        font-size: 2.5rem;
-    }
-
-    .main-section {
-        width: 98%;
-        height: 100%;
-        flex-direction: column-reverse;
-    }
-
-    .game-section {
-        /* Make the game grid more compact */
-        padding: 1rem;
-        gap: 1rem;
-        border-radius: 2rem;
-        height: 50%;
-    }
-
-    .box {
-        /* Use viewport width (vw) for fluidly sized boxes */
-        width: 25vw;
-        height: 25vw;
-        max-width: 6.5rem;  /* Set a max size */
-        max-height: 6.5rem; /* Set a max size */
-        border-radius: 2rem;
-    }
-
-    .game-board {
-        gap: 1.5rem;
-        padding: 1rem;
-        font-size: 1.2rem;
-    }
-
-    .start-end {
-        /* Stack the start/reset buttons vertically */
         flex-direction: column;
-        gap: 1rem;
-        height: auto;
-        background: none; /* Remove background for a cleaner look */
-        width: 80%;
-        box-shadow: none;
+        border-radius: 1rem;
     }
 
-    .box-1 {
-        width: 80%;
-        font-size: 1.2rem;
+    .diff-button, .message{
+        font-size: 0.8rem;
     }
 
-    .difficulty {
-        gap: 3rem;
-    }
-    
-    .diff-button {
-        width: 50%;
-        font-size: 1.2rem;
-        padding: 0.8rem;
+    .diff-button{
+        width: 100%;
     }
 
-    .message {
-        font-size: 1.5rem;
-    }
-}
-
-/* --- Mobile Styles (up to 600px) --- */
-@media screen and (max-width: 600px) {
-    /* ... (your other body, heading, etc. styles are fine) ... */
-
-    .game-section {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 1rem;
-        padding: 2rem;
-        border-radius: 2rem;
-        width: 90%; /* Make it take up the full width of its container */
-        height: auto;
-        justify-content: center;
-        align-items: center; /* Let the grid determine its own height */
+    .box{
+        width: 3rem;
+        height: 3rem;
+        font-size: 1rem;
     }
 
-    .box {
-        aspect-ratio: 1 / 1; /* This makes the box a perfect square */
-        background-color: var(--box-color);
-        cursor: pointer;
-        border-radius: 2rem;
-        box-shadow: 0.4rem 0.8rem 1.2rem 0.5rem rgba(0, 0, 0, 0.25);
-        border: none;
+    .start-end{
+        padding: 1rem;
+        border-radius: 1rem;
     }
 
-    /* ... (your other mobile styles for game-board, start-end, etc. are fine) ... */
-}
-
-
-.glow{
-    background-color: var(--glow-color);
-    filter: drop-shadow(0 0 1rem var(--glow-color));
-    color: black;
-}
-
-.right{
-    background-color: rgb(72, 255, 0);
-    filter: drop-shadow(0 0 1rem var(--glow-color));
-    color: black;
-}
-
-.wrong{
-    background-color: rgb(255, 0, 0);
-    filter: drop-shadow(0 0 1rem var(--glow-color));
-    color: black;
-}
-
-/* ========================================= */
-/*      DEFINITIVE LAPTOP & DESKTOP FIX      */
-/* ========================================= */
-
-/* 
-  This query starts at 1366px, a very common laptop resolution. 
-  It will catch the layout long before it breaks at 1270px.
-*/
-@media screen and (max-width: 1366px) {
-
-    /* --- THE FIX: Aggressively shrink ALL fixed horizontal values --- */
-
-    .game-section {
-        /* 1. Reduce the space INSIDE the container */
-        padding: 1.2rem;
-        /* 2. Reduce the space BETWEEN the boxes */
-        gap: 1.2rem; 
+    .game-section{
+        padding: 1rem;
     }
 
-    .box {
-        /* 3. Reduce the size of the boxes themselves */
-        width: 6.5rem;
-        height: 6.5rem;
-        
-        /* Scale down the font and radius to match */
-        font-size: 2.5rem;
-        border-radius: 2rem;
-    }
-
-    /* --- Also scale down other elements for visual consistency --- */
-    
-    .main-section {
-        gap: 1.5rem;
-    }
-    
-    .heading {
-        font-size: 3rem;
-    }
-
-    .game-board {
-        padding: 1.5rem;
-        font-size: 1.4rem;
-    }
-
-    .diff-button {
-        padding: 0.8rem;
-        font-size: 1.4rem;
-    }
-
-    .box-1 {
-        font-size: 1.3rem;
+    .box-1{
+        padding: 0.5rem;
+        border-radius: 0.5rem;
+        font-size: 0.7rem;
     }
 }

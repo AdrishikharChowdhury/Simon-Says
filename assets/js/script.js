@@ -77,7 +77,6 @@ const game=async ()=>{
     gameProgress=false;
     userStep=0;
     pattern=patternMaker(level);
-    console.log(pattern);
     for(const patternIdx of pattern)
     {
         patternGlower(boxes[patternIdx]);
