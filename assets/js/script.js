@@ -123,7 +123,8 @@ boxes.forEach((box,idx)=>{
 });
 
 if (window.location.hostname === "simonbollo.netlify.app") {
-    const baseTag = document.createElement("base");
-    baseTag.href = "/Simon-Says/";
-    document.head.appendChild(baseTag);
-  }
+  const baseTag = document.createElement("base");
+  // Setting base to root so './assets/...' resolves from root
+  baseTag.href = "/";
+  document.head.appendChild(baseTag);
+}
